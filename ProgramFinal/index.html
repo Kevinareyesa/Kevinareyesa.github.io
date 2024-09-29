@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #ffe6e6; /* fondo de página rosa pastel */
+        font-family: 'Pacifico', cursive; /* tipografía cursiva */
+      }
+
+      .cloud-box {
+        width: 200px;
+        height: auto; /* Ajuste dinámico de altura */
+        border: 1px solid #ffd700; /* borde dorado */
+        border-radius: 20px; /* para darle un borde redondeado */
+        cursor: pointer; /* para cambiar el cursor al hacer clic */
+        margin: 10px; /* para agregar un espacio entre las cajas */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* efecto de sombra */
+        background-color: white; /* color de fondo blanco */
+        text-align: center;
+        padding: 10px;
+      }
+
+      #title-button {
+        width: 50%;
+        height: 150px;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #ffd700; /* borde dorado */
+        border-radius: 20px; /* para darle un borde redondeado */
+        cursor: pointer; /* para cambiar el cursor al hacer clic */
+        margin: 20px auto; /* para centrar el botón */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* efecto de sombra */
+        background-color: white; /* color de fondo blanco */
+      }
+
+      #button-container {
+        display: flex;
+        justify-content: center; /* centrar los botones */
+        align-items: center;
+        margin-top: 50px; /* espacio entre los botones y el título */
+        gap: 20px; /* espacio entre cada botón */
+      }
+
+      #special-button {
+        background-color: #ff69b4; /* botón rosa */
+        color: #ffffff; /* texto blanco */
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 20px auto; /* para centrar el botón */
+      }
+
+      #special-button:hover {
+        background-color: #ff99cc; /* botón rosa claro al hacer hover */
+      }
+
+      #dialogo {
+        font-size: 24px;
+        font-style: italic;
+        color: #666666; /* texto gris */
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      #image-box, #image-box1 {
+        width: 150px;
+        height: 100px;
+        margin: 0 auto;
+      }
+
+      .image-text {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #666666; /* texto gris */
+      }
+
+      /* Estilo para la lista de canciones */
+      #song-list {
+        display: none; /* Oculto por defecto */
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0;
+      }
+
+      #song-list li {
+        margin-bottom: 10px;
+      }
+
+      #song-list a {
+        color: #ff69b4;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      #song-list a:hover {
+        text-decoration: underline;
+      }
+
+      /* Estilo para el mensaje que aparece al hacer clic en el botón */
+      #message {
+        font-size: 20px;
+        font-style: italic;
+        color: #333333; /* texto gris oscuro */
+        text-align: center;
+        margin-top: 20px;
+        display: none; /* Oculto por defecto */
+      }
+
+      #message-below {
+        font-size: 22px;
+        font-style: italic;
+        color: #333333; /* texto gris oscuro */
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+</head>
+<body>
+  <div id="title-button">
+    <p>Click aquí para ver el mensaje</p>
+  </div>
+
+  <div id="button-container">
+    <div class="cloud-box">
+      <p class="image-text">Así te veo en mi mundo</p> <!-- Texto añadido sobre la imagen -->
+      <img src="" id="image-box" alt="Imagen aleatoria"> <!-- caja para mostrar imágenes aleatorias -->
+    </div>
+    <div class="cloud-box" id="canciones-box">
+      <h2>Canciones especiales</h2>
+      <ul id="song-list">
+        <li><a href="https://www.youtube.com/watch?v=9tsbdSVOToQ" target="_blank">Solo</a></li>
+        <li><a href="https://www.youtube.com/watch?v=lhOw4biGtqE" target="_blank">Dejame</a></li>
+        <li><a href="https://youtu.be/IM7G-Mf9GWY" target="_blank">Estar</a></li>
+        <li><a href="https://youtu.be/c2BJ54zU-m4" target="_blank">Contigo</a></li>
+        <li><a href="https://youtu.be/8oKcAgnLBZA" target="_blank">Hasta</a></li>
+        <li><a href="https://youtu.be/sxZuh17L690" target="_blank">Que</a></li>
+        <li><a href="https://youtu.be/EpK7PalMhGw" target="_blank">La</a></li>
+        <li><a href="https://youtu.be/nvBnVa6-Z8Y" target="_blank">Vida</a></li>
+        <li><a href="https://youtu.be/Y4XFeho5kDs" target="_blank">Nos</a></li>
+        <li><a href="https://youtu.be/XeCe6uOl6zw" target="_blank">Deje</a></li>
+        <li><a href="https://youtu.be/I_pAwDI7Tk8" target="_blank">Ser</a></li>
+        <li><a href="https://youtu.be/9T8gFt4SU90" target="_blank">Felices</a></li>
+        <li><a href="https://youtu.be/rYc2_TA4ZHQ" target="_blank">Juntos</a></li>
+        <li><a href="https://youtu.be/BZTIsraLp4s" target="_blank">Por siempre ♥</a></li>
+      </ul>
+    </div>
+    <div class="cloud-box">
+        <p class="image-text1">Así siempre seré tu fan</p> <!-- Texto añadido sobre la imagen -->
+      <img src="" id="image-box1" alt="Imagen aleatoria"> <!-- caja para mostrar imágenes aleatorias -->
+    </div>
+  </div>
+
+  <!-- Contenedor para el mensaje que aparecerá después de hacer clic -->
+  <div id="message">Puede que en un futuro seamos algo, puede que NO, solo te queria dejar recuerdos para que sepas que alguien te ama de verdad por si algo sale mal y quieras recordar que siempre estaras en mi corazon</div>
+
+  <div style="text-align: center; margin-top: 50px;">
+    <button id="special-button">Click aquí para ver un mensaje especial</button>
+  </div>
+
+  <div id="dialogo"></div>
+
+  <!-- Mensaje que aparecerá después de que el primer botón sea presionado -->
+  <div id="message-below"></div>
+
+  <script>
+    function changeColor() {
+      document.getElementById("special-message").style.color = "#ff99cc";
+    }
+
+    // Agrega las imágenes que deseas mostrar en un arreglo
+    const imagenes = [
+      'DALL·E 2024-09-29 00.42.27 - A vibrant blue flower standing out in the middle of a green field. The field is filled with identical green grass and plants, but the flower is unique.webp',
+      'Leonardo_Phoenix_A_solitary_vibrant_star_shining_brightly_agai_0.jpg',
+      'DALL·E 2024-09-29 00.55.24 - A bright, colorful bird flying in the middle of a cloudy, gray sky. The bird is vivid with striking colors like reds, blues, and yellows, creating a s.webp',
+    ];
+
+    const imagenes1 = [
+      'WhatsApp Image 2024-09-14 at 10.47.43 AM.jpeg',
+      'WhatsApp Image 2024-09-14 at 10.48.55 AM.jpeg',
+      'WhatsApp Image 2024-09-29 at 2.07.04 AM.jpeg',
+    ];
+
+    // Selecciona los elementos que contendrán las imágenes
+    const imagenBox = document.querySelector('#image-box');
+    const imagenBox1 = document.querySelector('#image-box1');
+
+    // Crea una función para cambiar la imagen de manera aleatoria
+    function cambiarImagen() {
+      const imagenAleatoria = imagenes[Math.floor(Math.random() * imagenes.length)];
+      imagenBox.src = imagenAleatoria;
+    }
+
+    function cambiarImagen1() {
+      const imagenAleatoria1 = imagenes1[Math.floor(Math.random() * imagenes1.length)];
+      imagenBox1.src = imagenAleatoria1;
+    }
+
+    // Evento para mostrar las canciones especiales al hacer clic
+    const cancionesBox = document.getElementById('canciones-box');
+    cancionesBox.addEventListener('click', function() {
+      const songList = document.getElementById('song-list');
+      songList.style.display = songList.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Cuando la página cargue, se cambiarán las imágenes cada 3 segundos
+    window.addEventListener('load', function() {
+      cambiarImagen();
+      cambiarImagen1();
+
+      // Establece un intervalo para cambiar la imagen cada 3 segundos
+      setInterval(cambiarImagen, 3000); // Cambia imagenBox cada 3 segundos
+      setInterval(cambiarImagen1, 3000); // Cambia imagenBox1 cada 3 segundos
+    });
+
+    // Evento para mostrar el mensaje al hacer clic en el botón
+    const button = document.getElementById('special-button');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', function() {
+      // Limpia todo el contenido de la página
+      document.body.innerHTML = '';
+
+      // Muestra solo el mensaje
+      const specialMessage = document.createElement('div');
+      specialMessage.style.textAlign = 'center';
+      specialMessage.style.fontSize = '24px';
+      specialMessage.style.fontStyle = 'italic';
+      specialMessage.style.marginTop = '100px';
+      specialMessage.innerText = "Hola mi niña como estas, espero que muy bien, quiero que sepas que todo esto es por ti, aveces se que no sere la persona mejor persona, pero con 5 minutos me basta para estar feliz, muchas veces me pregunte a mi mismo *¿Esta sera la mejor idea?* y cada que te veia supe que si, ese dia en el carro me confirmaste casi todas mis teorias, pero se que tu no tienes la culpa de todo lo que el mundo te a echo, pero espero y que puedas dejarme cuidar tu corazon, como cuidare tu vida, espero que tu seas esa persona con la que un dia voy a despertar y cuidar, esa persona a la que la voy a defender y sin saber como, la voy a tener muy feliz, Te quiero demasiado ♥, tu eres mi pequeña Morgan Stark, porque te amare 3 millones, Tu eres mi sylvie porque Ya estuve donde estás, he sentido lo que sientes. No me preguntes cómo lo sé, solo te diré. que no quiero hacerte daño, no quiero 1 trompo. solo, solo quiero que estés bien y ya, y por ultimo tu eres mi Doctora Christine Palmer..... Te quiero en este y en todos los universos, el odio no viene en mi asi que tu tranquila, solo quiero tener en mi vida ♥.";
+      document.body.appendChild(specialMessage);
+    });
+
+    // Evento para el primer botón que muestra un mensaje y desaparece
+    const titleButton = document.getElementById('title-button');
+    const messageBelow = document.getElementById('message-below');
+
+    titleButton.addEventListener('click', function() {
+      // Mostrar el mensaje debajo de la pantalla
+      messageBelow.innerText = "Puede que en un futuro seamos algo, puede que NO, solo te queria dejar recuerdos para que sepas que alguien te ama de verdad por si algo sale mal y quieras recordar que siempre estaras en mi corazon ♥.";
+
+      // Borrar el botón después de hacer clic
+      titleButton.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
